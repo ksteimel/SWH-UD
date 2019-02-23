@@ -1,3 +1,4 @@
+#lem	tag	
 _	POSS-PRON	_	_	_	PRON	Possessive=Yes	_
 _	V|REL-LI	_	_	_	VERB	VerbForm=Part	_
 _	PRON|REL-LI	_	_	_	PRON	PronType=Rel	_
@@ -10,15 +11,15 @@ _	ADV	_	_	_	ADV	_	_
 _	PREP	_	_	_	ADP	_	_
 _	ADJ	_	_	_	ADJ	_	_
 _	PROPNAME	_	_	_	PROPN	_	_
-_	CC	_	_	_	_	_	_
+_	CC	_	_	_	CCONJ	_	_
 _	CONJ	_	@CS	_	SCONJ	_	@CS
 _	CONJ	_	@CC	_	CCONJ	_	@CC
-_	NUM	_	_	_	_	_	_
-_	DOUBLE-QUOTE-OPENING	_	_	_	_	_	_
-_	SEMI-COLON	_	_	_	_	_	_
-_	RIGHT-PARENTHESIS	_	_	_	_	_	_
+_	NUM	_	_	_	NUM	_	_
+_	DOUBLE-QUOTE-OPENING	_	_	_	PUNCT	_	_
+_	SEMI-COLON	_	_	_	PUNCT	_	_
+_	RIGHT-PARENTHESIS	_	_	_	PUNCT	_	_
 _	AG-PART	_	_	_	_	_	_
-_	LEFT-PARENTHESIS	_	_	_	_	_	_
+_	LEFT-PARENTHESIS	_	_	_	PUNCT	_	_
 _	COLON	_	_	_	PUNCT	_	_
 _	CONJ/CC	_	@CC	_	CCONJ	_	@CC
 _	SINGLE-QUOTE	_	_	_	PUNCT	_	_
