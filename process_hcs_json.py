@@ -19,17 +19,18 @@ for f in sys.argv[1:]:
 				if 'gloss' in w and type(w['gloss']) != type(None):
 					misc = misc + '|Gloss=' + w['gloss']
 
-			tag = w['pos'] + '|'+w['msd']
+			tag = w['pos'] 
+			msd = w['msd']
 			tag = tag.strip('|').replace('|_', '').replace(' ','|')
-			ws.append((idx, w['word'], w['lemma'], '_', tag.strip('|'), '_', '_', w['syntax'], '_', '_'))
+			msd = msd.strip('|').replace('|_', '').replace(' ','|')
+			ws.append((idx, w['word'], w['lemma'], '_', tag.strip('|'), msd.strip('|'), '_', w['syntax'], '_', '_'))
 			sent = sent + w['word'] + ' '
 			idx += 1
 			tks += 1
 		print('# sent_id = %s:%d' % (f, s_no))
 		print('# text = %s' % (sent))
 		for w in ws:
-			print('"<%s>"\n\t"%s" %s %s #%d->' % (w[1], w[2], w[4].replace('|', ' '), w[7], w[0]))
-#                        print('%d\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s' % w)
+                        print('%d\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s' % w)
 		print()
 		s_no += 1
 		total += 1
