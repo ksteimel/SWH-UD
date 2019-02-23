@@ -126,8 +126,8 @@ while line:
 			misc = 'Remainder='
 			for rem in list(remainder):
 				misc += rem + '|'
-			misc = misc.replace('|_', '').strip('|')
-			if misc == 'Remainder=_':
+			misc = misc.replace('_|','').replace('|_', '').strip('|').strip()
+			if misc == 'Remainder=_' or misc == 'Remainder=':
 				misc = '_'
 		u_feat_s = list(set(u_feat.split('|')));
 		u_feat_s.sort(key=str.lower);
