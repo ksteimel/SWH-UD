@@ -21,12 +21,12 @@ _	LEFT-PARENTHESIS	_	_	_	_	_	_
 _	COLON	_	_	_	PUNCT	_	_
 _	CONJ/CC	_	_	_	_	_	_
 _	SINGLE-QUOTE	_	_	_	PUNCT	_	_
-_	V-BE	_	_	_	_	_	_
-_	HYPHEN	_	_	_	_	_	_
+_	V-BE	_	_	_	AUX	_	_
+_	HYPHEN	_	_	_	PUNCT	_	_
 _	INTERROG	_	_	_	_	_	_
 _	GEN-CON-KWA	_	_	_	_	_	_
 _	EXCLAM	_	_	_	_	_	_
-_	QUESTION-MARK	_	_	_	_	_	_
+_	QUESTION-MARK	_	_	_	PUNCT	_	_
 _	DOUBLE-QUOTE-CLOSING	_	_	_	_	_	_
 _	ABBR	_	_	_	_	_	_
 _	SINGLE-QUOTE-OPENING	_	_	_	_	_	_
@@ -34,7 +34,7 @@ _	SLASH	_	_	_	_	_	_
 _	V-DEF	_	_	_	_	_	_
 _	DOUBLE-QUOTE	_	_	_	_	_	_
 _	REL-LI-VYO	_	_	_	_	_	_
-_	DEM	_	_	_	_	_	_
+_	DEM	_	_	_	_	PronType=Dem	_
 _	REL-SI	_	_	_	_	_	_
 _	TITLE	_	_	_	_	_	_
 _	A-UNINFL	_	_	_	_	_	_
