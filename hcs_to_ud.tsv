@@ -56,7 +56,7 @@ _	V-DEF	_	_	_	_	_	_
 _	_	10-Pl	_	_	_	Gender=10|Number=Plur	_
 #_	_	10-Pl-Rel	_	_	_	_	_
 _	_	11/10-Pl	_	_	_	Gender=11,10|Number=Plur	_
-#_	_	11/10-Sg	_	_	_	_	_
+_	_	11/10-Sg	_	_	_	Gender=11,10|Number=Sing	_
 #_	_	11/6-Pl	_	_	_	_	_
 #_	_	11/6-Sg	_	_	_	_	_
 #_	_	11-Sg	_	_	_	_	_
