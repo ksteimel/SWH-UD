@@ -1,7 +1,16 @@
 import json, sys
 total = 0
 tks = 0
-for f in sys.argv[1:]:
+
+fmt = 'conllu'
+fs = []
+if sys.argv[1] != 'conllu' and sys.argv[1] != 'cg3':
+	fs = sys.argv[1:]	
+else:
+	fmt = sys.argv[1]
+	fs = sys.argv[2:]
+
+for f in fs:
 	s_no = 0
 	fd = open(f, 'r')
 	doc = json.load(fd)
@@ -30,7 +39,10 @@ for f in sys.argv[1:]:
 		print('# sent_id = %s:%d' % (f, s_no))
 		print('# text = %s' % (sent))
 		for w in ws:
-                        print('%d\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s' % w)
+			if fmt == 'cg3':
+				print('"<%s>"\n\t"%s" %s %s #%d->%d' % (w[1], w[2], w[4].replace('|', ' '), w[7], w[0], w[0]))
+			else:
+	                        print('%d\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s' % w)
 		print()
 		s_no += 1
 		total += 1

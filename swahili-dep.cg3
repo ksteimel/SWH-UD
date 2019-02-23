@@ -1,0 +1,23 @@
+OPTIONS += no-inline-sets ;
+
+LIST PREP = PREP ; 
+LIST N = N ;
+
+LIST @<P = @<P ; 
+LIST @ADVL = @ADVL ; 
+LIST @<NADJ = @<NADJ ; 
+LIST @CS = @CS ; 
+LIST @<NDEM = @<NDEM ; 
+
+LIST @FMAINV = @FMAINVtr+OBJ> @FMAINVtr-OBJ> ; 
+
+SECTION
+
+SETPARENT @<P TO (-1* PREP + @ADVL) ;
+
+SETPARENT @<NADJ TO (-1* N) ;
+
+SETPARENT @<NDEM TO (-1* N) ; 
+
+SETPARENT @CS TO (1 @FMAINV) ;
+
