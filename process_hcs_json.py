@@ -40,7 +40,7 @@ for f in fs:
 		print('# text = %s' % (sent))
 		for w in ws:
 			if fmt == 'cg3':
-				print('"<%s>"\n\t"%s" %s %s #%d->%d' % (w[1], w[2], w[4].replace('|', ' '), w[7], w[0], w[0]))
+				print('"<%s>"\n\t"%s" %s %s %s #%d->%d' % (w[1], w[2], w[4].replace('|', ' '), w[5].replace('|', ' '), w[7], w[0], w[0]))
 			else:
 	                        print('%d\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s' % w)
 		print()

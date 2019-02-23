@@ -2,6 +2,7 @@ OPTIONS += no-inline-sets ;
 
 LIST PREP = PREP ; 
 LIST N = N ;
+LIST V = V ; 
 
 LIST @<P = @<P ; 
 LIST @ADVL = @ADVL ; 
@@ -21,3 +22,6 @@ SETPARENT @<NDEM TO (-1* N) ;
 
 SETPARENT @CS TO (1 @FMAINV) ;
 
+AFTER-SECTIONS
+
+SETPARENT (*) (NEGATE p (*)) TO (@0 (*)) ;
