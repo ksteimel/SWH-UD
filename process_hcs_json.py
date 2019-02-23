@@ -20,7 +20,7 @@ for f in sys.argv[1:]:
 					misc = misc + '|Gloss=' + w['gloss']
 
 			tag = w['pos'] 
-			msd = w['msd']
+			msd = w['msd'].title()
 			tag = tag.strip('|').replace('|_', '').replace(' ','|')
 			msd = msd.strip('|').replace('|_', '').replace(' ','|')
 			ws.append((idx, w['word'], w['lemma'], '_', tag.strip('|'), msd.strip('|'), '_', w['syntax'], '_', '_'))

@@ -23,7 +23,7 @@ def convert(lema, xpos, feat, dep, s):
 		remainder = msd - i[1];
 		intersect = msd.intersection(i[1]);
 		if intersect == i[1]: 
-			#print('-', msd, intersect, remainder, i[2], '|||', u_pos, u_feat, u_dep, file=sys.stderr);
+#			print('-', msd, intersect, remainder, i[2], '|||', u_pos, u_feat, u_dep, file=sys.stderr);
 			for j in list(i[2]): 
 				if j == j.upper():
 					u_pos = j;
@@ -33,6 +33,8 @@ def convert(lema, xpos, feat, dep, s):
 					else: 
 						u_feat = u_feat + '|' + j
 			msd = remainder;
+
+#	print('R:', remainder, file=sys.stderr)
 
 	if u_feat == '': 
 		u_feat = '_';
@@ -119,8 +121,14 @@ while line:
 
 		(u_lema, u_pos, u_feat, u_dep, remainder) = convert(lema, xpos, feat, udep, symbs);
 		misc = '_'
-		if row[5] != '_':
-			misc = 'MSD=' + row[5]
+#		print('R:', remainder)
+		if remainder != ():
+			misc = 'Remainder='
+			for rem in list(remainder):
+				misc += rem + '|'
+			misc = misc.replace('|_', '').strip('|')
+			if misc == 'Remainder=_':
+				misc = '_'
 		u_feat_s = list(set(u_feat.split('|')));
 		u_feat_s.sort(key=str.lower);
 		u_feat = '|'.join(u_feat_s);
