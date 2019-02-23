@@ -44,9 +44,13 @@ sf = open(sys.argv[1]);
 
 # Read in the replacement rules
 for line in sf.readlines(): 
-
+	if line[0] == '#':
+		continue
 	line = line.strip('\n');
 	row = line.split('\t')
+	if len(row) != 8:
+		print(row, file=sys.stderr)
+		continue
 	inn_lem = row[0];
 	inn_pos = row[1];
 	inn_feat = row[2];
@@ -112,13 +116,11 @@ while line:
 		xpos = row[4];
 		feat = row[5].split('|');
 		udep = row[7];
-		misc = row[9];
-		if misc != '_': 
-			misc = row[9].strip() + '|' + lema + '|' + xpos + '|' + '|'.join(feat).replace('_', '');
-		
-		misc = misc.strip('|');
 
 		(u_lema, u_pos, u_feat, u_dep, remainder) = convert(lema, xpos, feat, udep, symbs);
+		misc = '_'
+		if row[5] != '_':
+			misc = 'MSD=' + row[5]
 		u_feat_s = list(set(u_feat.split('|')));
 		u_feat_s.sort(key=str.lower);
 		u_feat = '|'.join(u_feat_s);
