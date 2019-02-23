@@ -9,8 +9,13 @@ LIST @ADVL = @ADVL ;
 LIST @<NADJ = @<NADJ ; 
 LIST @CS = @CS ; 
 LIST @<NDEM = @<NDEM ; 
-
-LIST @FMAINV = @FMAINVtr+OBJ> @FMAINVtr-OBJ> ; 
+LIST @SUBJ = @SUBJ ; 
+LIST @OBJ = @OBJ ; 
+LIST @FMAINVintr = @FMAINVtr-OBJ @FMAINVtr-OBJ>; 
+LIST 2-Pl = 2-Pl ;
+LIST Sub-Pref=2-Pl3 = Sub-Pref=2-Pl3 ;
+LIST Sub-Pref = 2-Pl3 ;
+LIST @FMAINVtr> = @FMAINVtr+OBJ> ; 
 
 SECTION
 
@@ -20,7 +25,13 @@ SETPARENT @<NADJ TO (-1* N) ;
 
 SETPARENT @<NDEM TO (-1* N) ; 
 
-SETPARENT @CS TO (1 @FMAINV) ;
+SETPARENT @CS TO (1 @FMAINVtr>) ;
+
+SETPARENT @SUBJ + 2-Pl TO (1 V + Sub-Pref=2-Pl3) ;
+
+SETPARENT @OBJ TO (-1* V + @FMAINVtr>) ;
+
+SETPARENT PREP + @ADVL TO (0* V) ; 
 
 AFTER-SECTIONS
 
