@@ -210,7 +210,7 @@ _	_	Propname	_	_	PROPN	_	_
 #_	_	Proverb>>>>	_	_	_	_	_
 #_	_	Proverb>>>>>	_	_	_	_	_
 #_	_	Proverb>>>>>>	_	_	_	_	_
-#_	_	Rel	_	_	_	_	_
+_	_	Rel	_	_	_	PronType=Rel	_
 #_	_	Relat	_	_	_	_	_
 #_	_	Rel-Pref=10-Pl	_	_	_	_	_
 #_	_	Rel-Pref=11-Sg	_	_	_	_	_
@@ -233,10 +233,10 @@ _	_	Propname	_	_	PROPN	_	_
 #_	_	Rel-Pref=Obj-Gen	_	_	_	_	_
 #_	_	Rel-Pref=Pos-Gen	_	_	_	_	_
 #_	_	Selfstanding	_	_	_	_	_
-#_	_	Sg	_	_	_	_	_
-#_	_	Sg1	_	_	_	_	_
-#_	_	Sg2	_	_	_	_	_
-#_	_	Sg3	_	_	_	_	_
+_	_	Sg	_	_	_	Number=Sing	_
+_	_	Sg1	_	_	_	Person=1|Number=Sing	_
+_	_	Sg2	_	_	_	Person=2|Number=Sing	_
+_	_	Sg3	_	_	_	Person=3|Number=Sing	_
 #_	_	Sg-Refl-Obj	_	_	_	_	_
 #_	_	Source	_	_	_	_	_
 _	_	Sub-Pref=10-Pl	_	_	_	Gender[subj]=10|Number=Plur	_
